@@ -1,6 +1,8 @@
 ---
 import Header from "../layouts/Header.astro";
 import Footer from "../layouts/Footer.astro";
+import Hero from "../layouts/Hero.astro";
+import "../CSS/Main.css";
 ---
 
 <!doctype html>
@@ -15,6 +17,9 @@ import Footer from "../layouts/Footer.astro";
 
   <body>
     <Header />
+    <main>
+      <Hero />
+    </main>
     <slot />
     <Footer />
   </body>

@@ -1,51 +1,74 @@
 <!-- SIDEBAR -->
 <header>
   <aside class="sidebar">
-    <!-- flyt den op først -->
+    <!-- Logo øverst -->
     <div class="logo">
       <a href="/">
         <img src="src/assets/logo.png" alt="Logo" />
       </a>
     </div>
+
+    <!-- Menu -->
     <div class="menu-icon">
       <nav>
-        <a href="/flow"> Tokis flow</a>
-        <a href="/cases"> Cases </a>
-        <a href="/about"> About us </a>
+        <a href="/flow">Tokis flow</a>
+        <a href="/cases">Cases</a>
+        <a href="/about">About us</a>
       </nav>
     </div>
   </aside>
+
+  <!-- Bølge baggrund -->
   <div class="wave"></div>
 </header>
 
-<!-- CSS styles for header og dropdown menu -->
+<!-- CSS styles -->
 <style>
+  /* Hele headeren fylder hele skærmen */
   header {
     position: relative;
     height: 100vh;
-    width: 100%;
+    width: 61%;
+    overflow: hidden;
   }
 
-  .green {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  /* Sidebar med logo og menu */
+  .sidebar {
+    position: relative;
+    z-index: 3; /* Sørger for at ligge foran bølgen */
+    display: flex;
+    flex-direction: column;
   }
 
-  .green img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
+  /* Logo styling */
   .logo img {
-    max-width: 100%;
+    max-width: 90px;
     height: auto;
+    display: block;
+  }
+  /* Hamburger menu (desktop) */
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 64rem;
+    cursor: pointer;
+    padding-left: 1rem;
   }
 
+  .menu-icon span {
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  .menu-icon:hover span:nth-child(2) {
+    width: 20px;
+  }
+
+  /* Menu styling */
   .menu-icon nav {
     margin-top: 30px;
     display: flex;
@@ -54,18 +77,61 @@
 
   .menu-icon nav a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 15px;
     font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
   }
 
+  .menu-icon nav a:hover {
+    color: #a9d0c1;
+  }
+
+  /* --- Dropdown-menu (kun mobil) --- */
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #32483c;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .dropdown-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    display: block;
+    font-size: 1rem;
+  }
+
+  /* Bølgebilledet bag sidebar */
   .wave {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 20%;
-    height: 51rem;
-    background: url("src/assets/Tegnebræt 1.png") no-repeat bottom center;
+    width: 20%; /* hvor bred bølgen skal være */
+    height: 100%;
+    background: url("src/assets/Tegnebræt 1.png") no-repeat center center;
     background-size: cover;
+    z-index: 2; /* ligger bag sidebar */
+  }
+
+  /* Responsiv til mobil */
+  @media (max-width: 768px) {
+    .logo img {
+      max-width: 120px;
+    }
+
+    .menu-icon nav a {
+      font-size: 16px;
+    }
+
+    .wave {
+      width: 40%;
+    }
   }
 </style>
