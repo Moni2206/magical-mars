@@ -1,0 +1,17 @@
+---
+const { company } = Astro.props;
+---
+
+<article>
+  <h3>Cases</h3>
+  <p>Click to read about the packaging solutions we have created for other companies.</p>
+  <img src={`https://qeoxxkgbtrpnlhjhgkqx.supabase.co/storage/v1/object/public/imgcases/${company.image}`} alt="case image" />
+</article>
+
+<style>
+  @media (max-width: 768px) {
+    img {
+      width: 80%;
+    }
+  }
+</style>

@@ -1,7 +1,7 @@
 ---
 import Header from "../layouts/Header.astro";
 import Footer from "../layouts/Footer.astro";
-import Hero from "../layouts/Hero.astro";
+
 import "../CSS/Main.css";
 ---
 
@@ -12,15 +12,13 @@ import "../CSS/Main.css";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>Tóki</title>
   </head>
 
   <body>
     <Header />
-    <main>
-      <Hero />
-    </main>
     <slot />
+
     <Footer />
   </body>
 </html>

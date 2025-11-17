@@ -1,8 +1,79 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "../layouts/Hero.astro";
+import Card from "../components/IndexCard.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const url = "https://qeoxxkgbtrpnlhjhgkqx.supabase.co/rest/v1/Cases?";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlb3h4a2didHJwbmxoamhna3F4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5NTAwNjgsImV4cCI6MjA3ODUyNjA2OH0.6_XM-4eljkeXa7wm8GXbTRTDW6-kYUAbBqbB8aAQeic";
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+const data = await fetch(url, options).then((res) => res.json());
 ---
 
-<Layout />
+<Layout>
+  <Hero />
+
+  <main>
+    <section>
+      <h2>Packaging is more than just brown cardboard</h2>
+      <p>
+        At Tóki, we are committed to creating packaging solutions based on what you as a company want. Together, we develop a packaging solution that your users will come to love. The packaging is the first thing a user sees before they open the
+        product — let’s create a great first impression for your customers.
+      </p>
+      <img src="src/assets/Firefly_Gemini Flash_packages(packaging)  in a slight minimalisitc design on a surface . the colors are sl 716179 1.png" alt="" />
+    </section>
+
+    <section>
+      {data.filter((c) => c.id === 3).map((c) => <Card company={c} />)}
+    </section>
+
+    <section>
+      <h3>Want get in touch?</h3>
+      <p>Click here so we can guide you to find the best packaging solutions .</p>
+      <img src="src/assets/Group 60.png" alt="" />
+    </section>
+
+    <section>
+      <h3>About Us</h3>
+      <p>Read more about the founders behind Tóki.</p>
+      <img src="src/assets/About.png" alt="" />
+    </section>
+  </main>
+</Layout>
+<style>
+  main {
+    padding: 4rem 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  main section:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  main section:first-of-type img {
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    main {
+      padding: 2rem;
+    }
+
+    main section:nth-of-type(2) {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

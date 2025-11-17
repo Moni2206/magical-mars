@@ -7,6 +7,7 @@
 </section>
 
 <style>
+  /* Desktop hero */
   .hero video {
     position: absolute;
     width: 100%;
@@ -15,5 +16,23 @@
     top: 0;
     left: 0;
     z-index: 0;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .hero video {
+      position: relative; /* gør den en del af flowet */
+      width: 100%; /* fylder nu hele mobilbredden */
+      height: 40vh; /* mindre højde på mobil */
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .hero {
+      position: relative;
+      margin-top: 0; /* så den ikke overlapper header/topbar */
+    }
   }
 </style>
