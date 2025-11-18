@@ -1,8 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Flow from "../components/Flow.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout />
+<Layout>
+  <main>
+    <h1>The Tóki Flow</h1>
+    <p>
+      Every packaging journey is unique. That’s why we’ve shaped our process into five flexible phases - designed to meet you exactly where you are. <br />
+      Explore each step below to see which one suits your needs best. You can choose one phase or follow the full flow - whichever fits your needs best.
+    </p>
+    <div class="line"></div>
+    <h2>The Five Phases</h2>
+    <Flow />
+  </main>
+</Layout>
+
+<style>
+  h1 {
+    color: #3a544a;
+  }
+  h2 {
+    color: #311407;
+  }
+  .line {
+    height: 2px; /* Tykkelse */
+    background-color: #3a544a; /* grøne linje */
+    width: 100%; /* Fuldbredde */
+    margin: 20px 0; /* Lidt afstand */
+  }
+</style>
