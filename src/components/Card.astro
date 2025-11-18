@@ -1,8 +1,10 @@
 ---
 const { company } = Astro.props;
+import Read from "../components/Read.astro";
 ---
 
 <article>
-  <h1>{company.companyname}</h1>
+  <h2>{company.companyname}</h2>
   <img src=`https://qeoxxkgbtrpnlhjhgkqx.supabase.co/storage/v1/object/public/imgcases/${company.image}` alt="case image" />
+  <Read />
 </article>

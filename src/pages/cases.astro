@@ -1,16 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-
+import Contact from "../components/Contact.astro";
+import "../CSS/Main.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-const url = 'https://qeoxxkgbtrpnlhjhgkqx.supabase.co/rest/v1/Cases?';
+const url = "https://qeoxxkgbtrpnlhjhgkqx.supabase.co/rest/v1/Cases?";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlb3h4a2didHJwbmxoamhna3F4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5NTAwNjgsImV4cCI6MjA3ODUyNjA2OH0.6_XM-4eljkeXa7wm8GXbTRTDW6-kYUAbBqbB8aAQeic";
-const options =  {
-    headers: {
-apikey: key,
-    },
+const options = {
+  headers: {
+    apikey: key,
+  },
 };
 
 const data = await fetch(url, options).then((res) => res.json());
@@ -18,8 +19,10 @@ console.log(data);
 ---
 
 <Layout>
-    <h1>Test</h1>
-    {data.map(company =><Card {company} />)}
+  <h1>Cases</h1>
+  <p>Every product has a journey — and packaging plays a big part in how that story is told.</p>
+  <p>We could tell you all about our process, our passion, and our precision -but we’d rather let the work speak for itself.</p>
+  {data.map((company) => <Card {company} />)}
+
+  <Contact />
 </Layout>
-
-
