@@ -28,12 +28,12 @@
   /* ---------------------- */
   header {
     position: relative;
-    width: 61%; /* desktop bredde */
+
     overflow: hidden;
   }
 
   .sidebar {
-    position: relative;
+    position: fixed;
     z-index: 3;
     height: 100vh; /* fylder hele viewport højde */
     display: flex;
@@ -82,11 +82,11 @@
 
   /* Wave bag sidebar */
   .wave {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 20%;
-    height: 150vh;
+    width: 12%;
+    height: 100vh;
     background: url("src/assets/Tegnebræt 1.png") repeat-y;
     background-size: cover;
     z-index: 2;

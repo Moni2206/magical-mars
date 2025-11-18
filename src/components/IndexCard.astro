@@ -9,9 +9,19 @@ const { company } = Astro.props;
 </article>
 
 <style>
+  img {
+    max-width: 450px;
+    height: 350px;
+  }
   @media (max-width: 768px) {
     img {
-      width: 80%;
+      width: 100%;
+    }
+    h3 {
+      padding-left: 12rem;
+    }
+    p {
+      margin: 2rem;
     }
   }
 </style>
