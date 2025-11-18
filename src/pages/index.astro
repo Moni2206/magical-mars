@@ -3,7 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../layouts/Hero.astro";
 import Card from "../components/IndexCard.astro";
 import Contact from "../components/Contact.astro";
-import Read from "../components/Read.astro";
+import ReadFlow from "../components/ReadFlow.astro";
+import ReadCases from "../components/ReadCases.astro";
 import Toki from "../components/Toki.astro";
 import "../CSS/Main.css";
 
@@ -38,14 +39,14 @@ const data = await fetch(url, options).then((res) => res.json());
       <section>
         {data.filter((c) => c.id === 3).map((c) => <Card company={c} />)}
         <div class="read-more">
-          <Read />
+          <ReadCases />
         </div>
       </section>
 
       <section>
         <h3>Want get in touch?</h3>
         <p class="intro">Click here so we can guide you to find the best packaging solutions .</p>
-        <img class="image" src="src/assets/Group 60.png" alt="" />
+        <img class="image" src="assets/Group 60.png" alt="" />
         <div class="contact-us">
           <Contact />
         </div>
@@ -56,16 +57,16 @@ const data = await fetch(url, options).then((res) => res.json());
 
         <Toki />
         <div class="read-more">
-          <Read />
+          <ReadFlow />
         </div>
       </section>
 
       <section>
         <h3>About Us</h3>
         <p class="intro">Read more about the founders behind Tóki.</p>
-        <img class="image" src="src/assets/About.png" alt="" />
+        <img class="image" src="assets/About.png" alt="" />
         <div class="read-more">
-          <Read />
+          <ReadFlow />
         </div>
       </section>
     </section>
