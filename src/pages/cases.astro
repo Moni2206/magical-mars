@@ -21,47 +21,65 @@ console.log(data);
 ---
 
 <Layout>
-  <section class="intro-cases">
-  <h1>Cases</h1>
+  <main>
 
-  <p>Every product has a journey — and packaging plays a big part in how that story is told.</p>
-  <p>We could tell you all about our process, our passion, and our precision -but we’d rather let the work speak for itself.</p>
-  <img class="img-case" src="assets/img-packaging.webp" alt="">
-  <p class="citat-1">“Tóki helped us reimagine the packaging for our handcrafted lamps - from bulky boxes to elegant, space-efficient designs that reflect our brand’s warmth and light. Our customers noticed immediately.”</p>
-  <p class="citat-2">— Lina K., Founder of Lumora Lighting</p>
-</section>
-
-  <section class="cases">
-{data.map((company) => <Card {company} />)}
-  </section>
-  <!-- <p>-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-
-  <Contact />
+    
+    <h1>Cases</h1>
+    <section class="intro-cases">
+      <p>Every product has a journey — and packaging plays a big part in how that story is told.</p>
+      <p>We could tell you all about our process, our passion, and our precision -but we’d rather let the work speak for itself.</p>
+      <img class="img-case" src="assets/img-packaging.webp" alt="">
+      <p class="citat-1"><i>“Tóki helped us reimagine the packaging for our handcrafted lamps - from bulky boxes to elegant, space-efficient designs that reflect our brand’s warmth and light. Our customers noticed immediately.”</i></p>
+      <p class="citat-2">— Lina K., Founder of Lumora Lighting</p>
+    </section>
+    
+    <section class="cases">
+      {data.map((company) => <Card {company} />)}
+    </section>
+    <!-- <p>-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+    
+    <Contact />
+  </main>
 </Layout>
 <style>
+
+  main {
+    padding: 2rem 0;
+  }
+
+  h1 {padding-top: 12rem;
+  text-align: center;}
+
   .intro-cases{
-    padding-top: 12rem;
+    padding-top: 1.5rem;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
 
 
 
-  p{max-width: 36rem;
-  }
+ 
   .img-case {
-    max-width: 30rem;
-    display: flex;
-    margin: auto;
+ height: 20rem;
+ width: 30rem;
   }
   .cases{
     margin-left: 2.5rem;
     margin-right: 2.5rem;
+    padding-bottom: 2rem;
     
   }
   .citat-1, .citat-2 {
     text-align: center;
     place-items: center;
+    
   }
- 
+  .citat-1{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+font-weight:;
+  }
+  .citat-2 {
+    margin-bottom: 1rem;
+  }
 </style>
