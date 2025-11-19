@@ -23,14 +23,21 @@ console.log(data);
 <Layout>
   <main>
 
-    
+    <section class="intro-cases"> 
+      <div class="grid-cases">
+        <div class="grid-p1">
     <h1>Cases</h1>
-    <section class="intro-cases">
+    
       <p>Every product has a journey — and packaging plays a big part in how that story is told.</p>
       <p>We could tell you all about our process, our passion, and our precision -but we’d rather let the work speak for itself.</p>
-      <img class="img-case" src="assets/img-packaging.webp" alt="">
+    </div>
+    <div class="grid-p2">
+      <img class="img-case" src="/assets/img-packaging.webp" alt="">
+    </div>
+  </div>
       <p class="citat-1"><i>“Tóki helped us reimagine the packaging for our handcrafted lamps - from bulky boxes to elegant, space-efficient designs that reflect our brand’s warmth and light. Our customers noticed immediately.”</i></p>
       <p class="citat-2">— Lina K., Founder of Lumora Lighting</p>
+      
     </section>
     
     <section class="cases">
@@ -56,12 +63,9 @@ console.log(data);
     margin-right: 2.5rem;
   }
 
-
-
  
   .img-case {
- height: 20rem;
- width: 30rem;
+    padding-top: 2rem;
   }
   .cases{
     margin-left: 2.5rem;
@@ -81,5 +85,39 @@ font-weight:;
   }
   .citat-2 {
     margin-bottom: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .grid-cases{
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      gap: 2rem;
+      padding-left: 3rem;
+      padding-right: 2rem;
+    }
+  .h1{
+    align-self: start start;
+  }
+    .cases {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.3rem;
+      padding: 4rem;
+    }
+    .img-case {
+      object-fit: cover ;
+    }
+    main{
+      margin-left: 10rem;
+    }
+    .img-case {
+      max-width: 40rem;
+    }
+    .citat-1 {
+      margin-top: 3rem;
+      padding-left: 18rem;
+      padding-right: 18rem;}
+
+   
   }
 </style>
