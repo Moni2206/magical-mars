@@ -30,8 +30,8 @@ console.log(data);
   <p class="citat-1">“Tóki helped us reimagine the packaging for our handcrafted lamps - from bulky boxes to elegant, space-efficient designs that reflect our brand’s warmth and light. Our customers noticed immediately.”</p>
   <p class="citat-2">— Lina K., Founder of Lumora Lighting</p>
 </section>
-  <section class="cases">
 
+  <section class="cases">
 {data.map((company) => <Card {company} />)}
   </section>
   <!-- <p>-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
@@ -41,16 +41,11 @@ console.log(data);
 <style>
   .intro-cases{
     padding-top: 12rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
-  *{
-    display: flex;
- flex-direction: column;
-  
-    margin: auto;
 
 
-    max-width: 80rem;
-  }
 
   p{max-width: 36rem;
   }
@@ -59,6 +54,14 @@ console.log(data);
     display: flex;
     margin: auto;
   }
-  .cases {}
-
+  .cases{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    
+  }
+  .citat-1, .citat-2 {
+    text-align: center;
+    place-items: center;
+  }
+ 
 </style>
