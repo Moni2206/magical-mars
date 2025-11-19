@@ -1,0 +1,88 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Identity from "../components/Identity.astro";
+import "../CSS/Main.css";
+import Contact from "../components/Contact.astro";
+import ReturnFlow from "../components/ReturnFlow.astro";
+---
+
+<Layout>
+  <main>
+    <section>
+      <h1>Identity</h1>
+      <Identity />
+      <div class="line"></div>
+
+      <img src="assets/image 7.webp" alt="" />
+      <div class="text-section">
+        <h3>1. Mapping Your Current Setup</h3>
+
+        <p>
+          We start with what you already know. We gather existing data, observations, and experiences — and complement it with our perspective on where your packaging works well and where there’s potential. <br /><br />Examples include: production &
+          logistics, brand positioning, channels, sustainability goals.
+        </p>
+      </div>
+      <br /><br />
+
+      <div class="line"></div>
+      <img src="assets/Group 45.webp" alt="" />
+      <h3>2. Analyzing the Packaging Journey</h3>
+      <p>
+        We follow your packaging all the way from factory to consumer.  We examine how form, materials, and communication interact across production, logistics, and customer experience. <br /><br /> The goal: pinpoint the areas where small changes can
+        have the biggest strategic and financial impact.
+      </p>
+      <br /><br />
+      <div class="line"></div>
+
+      <img src="public/assets/flow-3.webp" alt="" />
+      <h3>3. Defining a Shared Direction</h3>
+      <p>We outline the process, milestones, and decision points. <br /><br /> This creates a shared vision of how we’ll work together, balancing flexibility, pace, and clear direction.</p>
+      <br /><br />
+      <div class="contact-button">
+        <Contact />
+      </div>
+      <div class="flow-button">
+        <ReturnFlow href="/flow">&lt;-- Return</ReturnFlow>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .line {
+    height: 2px; /* Tykkelse */
+    background-color: black; /* Sort linje */
+    width: 100%; /* Fuldbredde */
+    margin: 20px 0; /* Lidt afstand */
+  }
+  @media (max-width: 768px) {
+    h1 {
+      padding-top: 13rem;
+      padding-left: 20rem;
+      padding-bottom: 3rem;
+    }
+    img {
+      width: 400px;
+      padding-left: 9rem;
+      padding-top: 2rem;
+    }
+    h3 {
+      padding-left: 9rem;
+    }
+    p {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+    section {
+      padding-bottom: 4rem;
+    }
+    .flow-button {
+      padding-left: 5rem;
+      padding-top: 4rem;
+    }
+    .contact-button {
+      padding-left: 18rem;
+      padding-top: 2rem;
+    }
+  }
+</style>
