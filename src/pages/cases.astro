@@ -3,10 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Contact from "../components/Contact.astro";
 import "../CSS/Main.css";
+import { pathHasLocale } from "astro:i18n";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 const url = "https://qeoxxkgbtrpnlhjhgkqx.supabase.co/rest/v1/Cases?";
+
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlb3h4a2didHJwbmxoamhna3F4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5NTAwNjgsImV4cCI6MjA3ODUyNjA2OH0.6_XM-4eljkeXa7wm8GXbTRTDW6-kYUAbBqbB8aAQeic";
 const options = {
   headers: {
@@ -19,10 +21,44 @@ console.log(data);
 ---
 
 <Layout>
+  <section class="intro-cases">
   <h1>Cases</h1>
+
   <p>Every product has a journey — and packaging plays a big part in how that story is told.</p>
   <p>We could tell you all about our process, our passion, and our precision -but we’d rather let the work speak for itself.</p>
-  {data.map((company) => <Card {company} />)}
+  <img class="img-case" src="assets/img-packaging.webp" alt="">
+  <p class="citat-1">“Tóki helped us reimagine the packaging for our handcrafted lamps - from bulky boxes to elegant, space-efficient designs that reflect our brand’s warmth and light. Our customers noticed immediately.”</p>
+  <p class="citat-2">— Lina K., Founder of Lumora Lighting</p>
+</section>
+  <section class="cases">
+
+{data.map((company) => <Card {company} />)}
+  </section>
+  <!-- <p>-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
 
   <Contact />
 </Layout>
+<style>
+  .intro-cases{
+    padding-top: 12rem;
+  }
+  *{
+    display: flex;
+ flex-direction: column;
+  
+    margin: auto;
+
+
+    max-width: 80rem;
+  }
+
+  p{max-width: 36rem;
+  }
+  .img-case {
+    max-width: 30rem;
+    display: flex;
+    margin: auto;
+  }
+  .cases {}
+
+</style>
