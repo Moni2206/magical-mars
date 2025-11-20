@@ -4,8 +4,8 @@ import ReadCases from "../components/ReadCases.astro";
 ---
 
 <article>
-  <h2>{company.companyname}</h2>
   <img src=`https://qeoxxkgbtrpnlhjhgkqx.supabase.co/storage/v1/object/public/imgcases/${company.image}` alt="case image" />
+  <h2>{company.companyname}</h2>
   <p>{company.description}</p>
   <ul>
     {company.buycategory.map(cat => {
@@ -28,6 +28,14 @@ padding: 1.5rem 0;
 @media (min-width: 768px) {
   ul {
     padding: 2rem 0;
+   decoration: none;
+  }
+  li {
+    text-decoration: none;
   }
 }
+@media (min-width: 768px) {
+img {
+margin: 1.5rem 0;
+}}
 </style>  

@@ -26,10 +26,12 @@ console.log(data);
     <section class="intro-cases"> 
       <div class="grid-cases">
         <div class="grid-p1">
-    <h1>Cases</h1>
     
+  <h1>Cases</h1>
+    <div class="text">
       <p>Every product has a journey — and packaging plays a big part in how that story is told.</p>
       <p>We could tell you all about our process, our passion, and our precision -but we’d rather let the work speak for itself.</p>
+    </div>
     </div>
     <div class="grid-p2">
       <img class="img-case" src="/assets/img-packaging.webp" alt="">
@@ -53,9 +55,9 @@ console.log(data);
   main {
     padding: 2rem 0;
   }
-
+  @media (max-width: 768px) {
   h1 {padding-top: 12rem;
-  text-align: center;}
+  text-align: center;}}
 
   .intro-cases{
     padding-top: 1.5rem;
@@ -91,17 +93,25 @@ font-weight:;
     .grid-cases{
       display: grid;
       grid-template-columns: 1fr 1fr ;
-      gap: 2rem;
+      grid-template-rows:  1fr;
+      gap: 3rem;
       padding-left: 3rem;
       padding-right: 2rem;
     }
   .h1{
     align-self: start start;
+    margin-bottom: 2rem;
+    margin-top: 6rem;
+    grid-row: 1;
+
   }
+  .text{
+    }
+
     .cases {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3.3rem;
+      gap: 3.4rem;
       padding: 4rem;
     }
     .img-case {
@@ -115,8 +125,9 @@ font-weight:;
     }
     .citat-1 {
       margin-top: 3rem;
-      padding-left: 18rem;
-      padding-right: 18rem;}
+      padding-left: 17rem;
+      padding-right: 10rem;
+    text-align: center;}
 
    
   }
