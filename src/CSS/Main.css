@@ -1,7 +1,16 @@
+@font-face {
+  font-family: Nunito;
+  src: url("fonts/Nunito");
+}
 body {
   background-color: #fff8f1;
   font-family: Nunito Sans, sans-serif;
+  line-height: 1.6rem;
 }
+p {
+  color: #311407;
+}
+
 h1 {
   font-size: 64px;
   color: #3a544a;
