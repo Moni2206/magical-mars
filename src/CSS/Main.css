@@ -1,15 +1,27 @@
 @font-face {
-  font-family: Nunito;
-  src: url("fonts/Nunito");
+  font-family: "Nunito";
+  src: url("/public/fonts/Nunito_Sans/NunitoSans-Italic-VariableFont_YTLC\,opsz\,wdth\,wght.ttf");
 }
 body {
   background-color: #fff8f1;
-  font-family: Nunito Sans, sans-serif;
+
   line-height: 1.6rem;
+}
+p,
+h1,
+h2,
+h3,
+footer p {
+  font-family: "Nunito";
 }
 p {
   color: #311407;
+  font-size: 18px;
 }
+footer p {
+  color: #fff8f1;
+}
+
 h1 {
   font-size: 64px;
   color: #3a544a;
@@ -20,11 +32,14 @@ h2 {
 h3 {
   font-size: 26px;
 }
-p {
-  font-size: 18px;
-}
-
 @media (max-width: 768px) {
+  p,
+  h1,
+  h2,
+  h3,
+  footer p {
+    font-family: "Nunito";
+  }
   h1 {
     font-size: 34px;
   }
